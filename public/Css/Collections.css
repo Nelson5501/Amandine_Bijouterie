@@ -1,0 +1,16 @@
+.Header { 
+margin: 5em auto; 
+max-width: 1000px; 
+width: 95%; 
+font: 15px/1.5 sans-serif; 
+}
+.contenair 
+.card { 
+margin: 1em auto; 
+max-width: 1000px; 
+width: 70%; 
+font: 15px/1.5 sans-serif; 
+}
+h4{
+    align-content: center;
+}

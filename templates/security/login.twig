@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in {% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('Css/login.css') }}">
+<link rel="stylesheet" href="{{ asset('Css/base.css') }}">
+{% endblock %}
+
+{% block body %}
+<form method="post">
+
+    {% if error %}
+    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    {% if app.user %}
+    <div class="mb-5">
+    {{ app.user.username }}, <a href="{{ path('compte/compte.twig') }}">
+    </div>
+    <div class="mb-3">
+        You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+    </div>
+    {% endif %}
+
+    {% block form %}
+
+        <h1 class="mb3 font-weight-normal">Log In</h1>
+        <label for="inputAmandineHerman ">User</label>
+        <input type="text" name="AmandineHerman" id="inputAmandineHerman" class="" required autofocus>
+        <label for="inputPassword">Password</label>
+        <input type="password" name="password text-center" id="inputPassword" class="" required>
+    </div>
+    <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+    
+    <button class="btn btn-lg" type="submit">Connexions</button>
+</form>
+
+{% endblock %}
+{% endblock %}
