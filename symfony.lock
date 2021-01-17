@@ -81,6 +81,9 @@
     "egulias/email-validator": {
         "version": "2.1.22"
     },
+    "friendsofphp/proxy-manager-lts": {
+        "version": "v1.0.3"
+    },
     "laminas/laminas-code": {
         "version": "3.4.1"
     },
@@ -95,9 +98,6 @@
     },
     "nikic/php-parser": {
         "version": "v4.10.2"
-    },
-    "ocramius/proxy-manager": {
-        "version": "2.9.1"
     },
     "phpdocumentor/reflection-common": {
         "version": "2.2.0"
@@ -539,15 +539,6 @@
             "webpack.config.js"
         ]
     },
-    "symfony/webpack-encore-pack": {
-        "version": "1.0",
-        "recipe": {
-            "repo": "github.com/symfony/recipes",
-            "branch": "master",
-            "version": "1.0",
-            "ref": "e18b0c550c3ee79142dc314b3e38193caafe4bb5"
-        }
-    },
     "symfony/yaml": {
         "version": "v5.1.7"
     },
@@ -559,9 +550,6 @@
     },
     "twig/twig": {
         "version": "v3.1.0"
-    },
-    "webimpress/safe-writer": {
-        "version": "2.1.0"
     },
     "webmozart/assert": {
         "version": "1.9.1"

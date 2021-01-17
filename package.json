@@ -26,5 +26,6 @@
         "mobx": "^6.0.4",
         "mobx-react": "^7.0.5",
         "react-star-rating-component": "^1.4.1"
-    }
+    },
+    "name": "Amandine"
 }
