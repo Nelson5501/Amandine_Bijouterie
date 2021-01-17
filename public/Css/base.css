@@ -1,6 +1,6 @@
-body{
+/*#body{
   background-color: rgb(250, 241, 243);
-}
+}*/
 .navigation{
   font-size: 2.5vh;
   text-align: center;
@@ -10,8 +10,11 @@ body{
 }
 .navigation h2 {
 font-size: 40px;
-font-family:cursive;
+font-family: cursive;
 text-align: center;
 align-items: center;
 align-content: center;
+}
+.container-fluid{
+  text-align: center;
 }

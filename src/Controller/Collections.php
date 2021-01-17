@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class Collections extends AbstractController
 {
     /**
-     * @Route("/Collections", name="Collections")
+     * @Route("/collections", name="Collections")
      */
     public function index(): Response
     {

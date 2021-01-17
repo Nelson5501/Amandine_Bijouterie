@@ -1,5 +1,6 @@
 {
     "liveServer.settings.CustomBrowser": "firefox",
     "symfony-vscode.consolePath": "",
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "compile-hero.generate-minified-css": true
 }

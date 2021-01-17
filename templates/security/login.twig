@@ -2,9 +2,32 @@
 
 {% block title %}Log in {% endblock %}
 
+
 {% block stylesheets %}
-<link rel="stylesheet" href="{{ asset('Css/login.css') }}">
 <link rel="stylesheet" href="{{ asset('Css/base.css') }}">
+<link rel="stylesheet" href="{{ asset('Css/login/main.css') }}">
+<link rel="stylesheet" href="{{ asset('Css/login/util.css') }}">
+<link rel="stylesheet" href="{{ asset('public/vendor/bootstrap/css/bootstrap.min.css') }}"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+<link rel="stylesheet" href="{{ asset('public/fonts/Linearicons-Free-v1.0.0/icon-font.min.css') }}"/>
+<link rel="stylesheet" href="{{ asset('public/vendor/animate/animate.css') }}"/>
+<link rel="stylesheet" href="{{ asset('public/vendor/css-hamburgers/hamburgers.min.css') }}"/>
+<link rel="stylesheet" href="{{ asset('public/vendor/animsition/css/animsition.min.css') }}"/>
+<link rel="stylesheet" href="{{ asset('public/vendor/select2/select2.min.css') }}"/>
+<link rel="stylesheet" href="{{ asset('public/vendor/daterangepicker/daterangepicker.css') }}"/>
+{% endblock %}
+
+{% block js %}
+<script src="{{ asset('JS/main.js') }}"></script>
+<script src="{{ asset('vendor/vendors/jquery/jquery-3.2.1.min.js') }}"></script>
+<script src="{{ asset('vendor/vendors/animsition/js/animsition.min.js') }}"></script>
+<script src="{{ asset('vendor/vendors/bootstrap/js/popper.js') }}"></script>
+<script src="{{ asset('vendor/vendors/bootstrap/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('vendor/vendors/select2/select2.min.js') }}"></script>
+<script src="{{ asset('vendor/vendors/daterangepicker/moment.min.js') }}"></script>
+<script src="{{ asset('vendor/vendors/daterangepicker/daterangepicker.js') }}"></script>
+<script src="{{ asset('vendor/vendors/countdowntime/countdowntime.js') }}"></script>
+
 {% endblock %}
 
 {% block body %}
@@ -15,26 +38,81 @@
     {% endif %}
 
     {% if app.user %}
-    <div class="mb-5">
-    {{ app.user.username }}, <a href="{{ path('compte/compte.twig') }}">
+    <div class="">
+   	 {{ app.user.username }}, <a href="{{ path('compte/compte.twig') }}">
     </div>
-    <div class="mb-3">
+
+    <div class="">
         You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
     </div>
     {% endif %}
 
-    {% block form %}
 
-        <h1 class="mb3 font-weight-normal">Log In</h1>
-        <label for="inputAmandineHerman ">User</label>
-        <input type="text" name="AmandineHerman" id="inputAmandineHerman" class="" required autofocus>
-        <label for="inputPassword">Password</label>
-        <input type="password" name="password text-center" id="inputPassword" class="" required>
-    </div>
-    <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
-    
-    <button class="btn btn-lg" type="submit">Connexions</button>
-</form>
+{% block form %}
+
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100 p-l-85 p-r-85 p-t-55 p-b-55">
+			
+				<form class="login100-form validate-form flex-sb flex-w">
+					<span class="login100-form-title p-b-32">
+						Admin Login
+					</span>
+
+					<span class="txt1 p-b-11">
+						Username
+					</span>
+
+					<div class="wrap-input100 validate-input m-b-36" data-validate = "Username is required">
+						<input class="input100" type="text" name="username" >
+						<span class="focus-input100"></span>
+					</div>
+					
+					<span class="txt1 p-b-11">
+						Password
+					</span>
+					<div class="wrap-input100 validate-input m-b-12" data-validate = "Password is required">
+						<span class="btn-show-pass">
+							<i class="fa fa-eye"></i>
+						</span>
+						<input class="input100" type="password" name="pass" >
+						<span class="focus-input100"></span>
+					</div>
+					
+					<div class="flex-sb-m w-full p-b-48">
+						<div class="contact100-form-checkbox">
+							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+							<label class="label-checkbox100" for="ckb1">
+								Remember me
+							</label>
+						</div>
+
+						<div>
+							<a href="#" class="txt3">
+								Forgot Password
+							</a>
+						</div>
+					</div>
+
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+						Login
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+						</button>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="dropDownSelect1"></div>
+			</div>
+
+	
+
 
 {% endblock %}
 {% endblock %}

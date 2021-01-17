@@ -21,6 +21,7 @@ security:
             guard:
                 authenticators:
                     - App\Security\Login
+                    - App\Security\AmandineAuthenticator
                 entry_point: App\Security\Login
             logout:
                 path: app_logout
